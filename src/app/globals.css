@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0a0a0a;
+  --background: #fafaf9;
+  --accent: #1a5f4a;
+  --accent-light: #2d7a62;
+  --border: #e7e5e4;
+  --card: #ffffff;
+  --muted: #78716c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fafaf9;
+    --background: #1c1917;
+    --accent: #34d399;
+    --accent-light: #6ee7b7;
+    --border: #404040;
+    --card: #292524;
+    --muted: #a8a29e;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Curriculum table styling */
+.curriculum-table {
+  @apply w-full border-collapse;
+}
+
+.curriculum-table th {
+  @apply text-left p-4 font-semibold border-b-2 border-stone-300 dark:border-stone-600 bg-stone-100 dark:bg-stone-800;
+}
+
+.curriculum-table td {
+  @apply p-4 border-b border-stone-200 dark:border-stone-700;
+}
+
+.curriculum-table tr:hover td {
+  @apply bg-stone-50 dark:bg-stone-800/50;
+}
+
+.step-badge {
+  @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold bg-emerald-600 text-white;
+}
+
+/* Sidebar scrollbar */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148 163 184) transparent;
+}
+
+.dark .sidebar-scroll {
+  scrollbar-color: rgb(71 85 105) transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184);
+  border-radius: 3px;
+}
+
+.dark .sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgb(71 85 105);
+}
+
+/* Hide horizontal scrollbar on mobile nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
