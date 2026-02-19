@@ -69,6 +69,12 @@ src/
 | christ-cursed | Christ Made a Curse for Us | 우리를 위한 저주가 되신 그리스도 |
 | one-body-death | One Body – Death and Life | 한 몸 – 사망과 생명 |
 
+## Vercel Deployment
+
+If the project lives in a subfolder (e.g. `kjv-rd-meal/`) in your repo:
+- Set **Root Directory** to `kjv-rd-meal` in Vercel Project Settings
+- Leave other defaults (Framework: Next.js)
+
 ## License
 
 Private. KJV text: Public Domain. 흠정역: 해당 출판사의 저작권 규정을 따릅니다.

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { VERSE_CATEGORIES } from "@/data/verse-refs";
+import { VERSE_CATEGORIES } from "../data/verse-refs";
 
 const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/henrynkoh/kjv-rd-supper";
 
